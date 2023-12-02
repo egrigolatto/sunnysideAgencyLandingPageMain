@@ -1,0 +1,24 @@
+.btnLearnMore {
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+  color: var(--Very_dark_desaturated_blue);
+  font-family: $fuente_2;
+  font-size: 0.9em;
+}
+
+.after {
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  width: 110%;
+  height: 10px;
+  opacity: 0.3;
+  z-index: -1;
+  border-radius: 5px;
+  transition: opacity 0.5s ease;
+}
+
+.btnLearnMore:hover .after {
+  opacity: 1;
+}

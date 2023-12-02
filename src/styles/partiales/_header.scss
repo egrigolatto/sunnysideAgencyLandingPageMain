@@ -1,0 +1,168 @@
+.header{
+  
+  background-image: $fondoHeroMobile;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+ 
+  position: relative;
+
+  &__cont1{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 5%;
+
+    .navCont{
+       text-align: center;
+       display: none;
+       position: absolute;
+       width: 90%;
+       top: 250px;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       padding: 20px 0 40px 0;
+       transition: $trasicion;
+       background-color: var(--White);
+       .navBar{
+        li{
+          margin: 30px 0;
+        }
+        a{
+          color: var(--Dark_grayish_blue);
+        }
+        
+       }
+       .btnContact{
+          padding: 15px 25px;
+          border: none;
+          border-radius: 25px;
+          font-size: $fuente_1;
+          color: var(--Very_dark_desaturated_blue);
+          background-color: var(--Yellow);
+          font-family: $fuente_2;
+          cursor: pointer;
+          transition: $trasicion;
+        }
+        .btnContact:hover{
+          background-color: #70CFFE;
+          color: var(--White);
+        }
+        .trianguloMenu{
+          width: 30px;
+          height: 30px;
+          clip-path: polygon(0% 100%, 100% 0%, 100% 100%); 
+          background-color: var(--White);
+          position: absolute;
+          top: -29px;
+          right: 0;
+  }
+      }
+      .show{
+        display: block;
+      }
+
+  }
+  &__cont2{
+    text-align: center;
+    h1{
+      color: var(--White);
+      font-family: $fuente_2;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    
+    img{
+      margin-top: 30px;
+      width: 30px;
+    }
+   
+  }
+ 
+}
+@media (min-width: 768px) {
+  .header {
+    background-image: $fondoHeroDesktop;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+
+    &__cont1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+      padding: 30px 5%;
+
+      .hamburIcon {
+        display: none;
+      }
+
+      .navCont {
+        display: flex;
+        align-items: center;
+        position: static;
+        background-color: transparent;
+        text-align: right;
+        width: auto;
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 0;
+
+        .navBar {
+          ul{
+            display: flex;
+            align-items: center;
+          }
+          li {
+            margin: 0 20px;
+            
+          }
+          a {
+            color: var(--White);
+          }
+        }
+        .btnContact {
+          padding: 15px 25px;
+          border: none;
+          border-radius: 25px;
+          font-size: $fuente_1;
+          color: var(--Very_dark_desaturated_blue);
+          background-color: var(--White);
+          font-family: $fuente_2;
+          cursor: pointer;
+          transition: $trasicion;
+        }
+        .btnContact:hover {
+          background-color: #70CFFE;
+          color: var(--White);
+        }
+        .trianguloMenu {
+          display: none;
+        }
+      }
+    }
+
+    &__cont2 {
+      text-align: center;
+      h1 {
+        color: var(--White);
+        font-family: $fuente_2;
+        margin-top: 30px;
+        margin-bottom: 60px;
+        br{
+          display: none;
+        }
+      }
+
+
+      img {
+        margin-top: 30px;
+        width: 30px;
+      }
+    }
+  }
+}
